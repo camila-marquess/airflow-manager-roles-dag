@@ -1,0 +1,46 @@
+[2025-02-11T00:08:18.600+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-11T00:08:18.633+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: manage_airflow_roles.assign_generic_permissions_roles manual__2025-02-11T00:08:07.764104+00:00 [queued]>
+[2025-02-11T00:08:18.651+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: manage_airflow_roles.assign_generic_permissions_roles manual__2025-02-11T00:08:07.764104+00:00 [queued]>
+[2025-02-11T00:08:18.652+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-02-11T00:08:18.674+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonDecoratedOperator): assign_generic_permissions_roles> on 2025-02-11 00:08:07.764104+00:00
+[2025-02-11T00:08:18.681+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3531) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-11T00:08:18.683+0000] {standard_task_runner.py:72} INFO - Started process 3532 to run task
+[2025-02-11T00:08:18.684+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'manage_***_roles', 'assign_generic_permissions_roles', 'manual__2025-02-11T00:08:07.764104+00:00', '--job-id', '165', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpmtq2492b']
+[2025-02-11T00:08:18.686+0000] {standard_task_runner.py:105} INFO - Job 165: Subtask assign_generic_permissions_roles
+[2025-02-11T00:08:18.789+0000] {task_command.py:467} INFO - Running <TaskInstance: manage_airflow_roles.assign_generic_permissions_roles manual__2025-02-11T00:08:07.764104+00:00 [running]> on host 9c5f21acce5a
+[2025-02-11T00:08:18.999+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-team' AIRFLOW_CTX_DAG_ID='manage_***_roles' AIRFLOW_CTX_TASK_ID='assign_generic_permissions_roles' AIRFLOW_CTX_EXECUTION_DATE='2025-02-11T00:08:07.764104+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-11T00:08:07.764104+00:00'
+[2025-02-11T00:08:19.000+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-11T00:08:22.172+0000] {dag.py:152} INFO - Assigning Website:c permissions to data-team
+[2025-02-11T00:08:25.067+0000] {dag.py:152} INFO - Assigning Website:c permissions to dados
+[2025-02-11T00:08:27.780+0000] {dag.py:152} INFO - Assigning Website:a permissions to data-team
+[2025-02-11T00:08:30.545+0000] {dag.py:152} INFO - Assigning Website:a permissions to dados
+[2025-02-11T00:08:33.560+0000] {dag.py:152} INFO - Assigning Website:n permissions to data-team
+[2025-02-11T00:08:36.834+0000] {dag.py:152} INFO - Assigning Website:n permissions to dados
+[2025-02-11T00:08:39.845+0000] {dag.py:152} INFO - Assigning Website:_ permissions to data-team
+[2025-02-11T00:08:43.069+0000] {dag.py:152} INFO - Assigning Website:_ permissions to dados
+[2025-02-11T00:08:45.632+0000] {dag.py:152} INFO - Assigning Website:r permissions to data-team
+[2025-02-11T00:08:48.420+0000] {dag.py:152} INFO - Assigning Website:r permissions to dados
+[2025-02-11T00:08:51.621+0000] {dag.py:152} INFO - Assigning Website:e permissions to data-team
+[2025-02-11T00:08:55.078+0000] {dag.py:152} INFO - Assigning Website:e permissions to dados
+[2025-02-11T00:08:57.747+0000] {dag.py:152} INFO - Assigning Website:a permissions to data-team
+[2025-02-11T00:09:01.083+0000] {dag.py:152} INFO - Assigning Website:a permissions to dados
+[2025-02-11T00:09:04.195+0000] {dag.py:152} INFO - Assigning Website:d permissions to data-team
+[2025-02-11T00:09:07.396+0000] {dag.py:152} INFO - Assigning Website:d permissions to dados
+[2025-02-11T00:09:10.563+0000] {dag.py:152} INFO - Assigning DAG Runs:can_read permissions to data-team
+[2025-02-11T00:09:13.534+0000] {dag.py:152} INFO - Assigning DAG Runs:can_read permissions to dados
+[2025-02-11T00:09:14.273+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-02-11T00:09:14.274+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-11T00:09:14.275+0000] {process_utils.py:132} INFO - Sending 15 to group 3532. PIDs of all processes in the group: [3800, 3532]
+[2025-02-11T00:09:14.275+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 3532
+[2025-02-11T00:09:14.276+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-02-11T00:09:14.279+0000] {dag.py:154} INFO - Error assigning DAG Runs permissions to data-team
+[2025-02-11T00:09:14.809+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=3800, status='terminated', started='00:09:12') (3800) terminated with exit code None
+[2025-02-11T00:09:17.217+0000] {dag.py:152} INFO - Assigning DAG Runs:can_edit permissions to dados
+[2025-02-11T00:09:20.093+0000] {dag.py:152} INFO - Assigning DAG Runs:can_create permissions to data-team
+[2025-02-11T00:09:22.897+0000] {dag.py:152} INFO - Assigning DAG Runs:can_create permissions to dados
+[2025-02-11T00:09:22.898+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-02-11T00:09:22.905+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-11T00:09:22.905+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=manage_***_roles, task_id=assign_generic_permissions_roles, run_id=manual__2025-02-11T00:08:07.764104+00:00, execution_date=20250211T000807, start_date=20250211T000818, end_date=20250211T000922
+[2025-02-11T00:09:22.939+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=3532, status='terminated', exitcode=0, started='00:08:18') (3532) terminated with exit code 0

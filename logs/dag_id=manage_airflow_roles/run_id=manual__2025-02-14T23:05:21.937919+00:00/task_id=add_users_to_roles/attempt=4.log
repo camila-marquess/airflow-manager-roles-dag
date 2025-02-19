@@ -1,0 +1,22 @@
+[2025-02-14T23:08:22.183+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-14T23:08:22.212+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: manage_airflow_roles.add_users_to_roles manual__2025-02-14T23:05:21.937919+00:00 [queued]>
+[2025-02-14T23:08:22.232+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: manage_airflow_roles.add_users_to_roles manual__2025-02-14T23:05:21.937919+00:00 [queued]>
+[2025-02-14T23:08:22.233+0000] {taskinstance.py:2866} INFO - Starting attempt 4 of 4
+[2025-02-14T23:08:22.259+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonDecoratedOperator): add_users_to_roles> on 2025-02-14 23:05:21.937919+00:00
+[2025-02-14T23:08:22.270+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1333) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-14T23:08:22.272+0000] {standard_task_runner.py:72} INFO - Started process 1334 to run task
+[2025-02-14T23:08:22.274+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'manage_***_roles', 'add_users_to_roles', 'manual__2025-02-14T23:05:21.937919+00:00', '--job-id', '356', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp2c9pj_ly']
+[2025-02-14T23:08:22.276+0000] {standard_task_runner.py:105} INFO - Job 356: Subtask add_users_to_roles
+[2025-02-14T23:08:22.361+0000] {task_command.py:467} INFO - Running <TaskInstance: manage_airflow_roles.add_users_to_roles manual__2025-02-14T23:05:21.937919+00:00 [running]> on host 71404c6b5320
+[2025-02-14T23:08:22.601+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-team' AIRFLOW_CTX_DAG_ID='manage_***_roles' AIRFLOW_CTX_TASK_ID='add_users_to_roles' AIRFLOW_CTX_EXECUTION_DATE='2025-02-14T23:05:21.937919+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-14T23:05:21.937919+00:00'
+[2025-02-14T23:08:22.603+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-14T23:08:22.612+0000] {logging_mixin.py:190} INFO - {'data-team': ['teste-user@gmail.com']}
+[2025-02-14T23:08:22.613+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2025-02-14T23:08:22.614+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-02-14T23:08:22.645+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-14T23:08:22.646+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=manage_***_roles, task_id=add_users_to_roles, run_id=manual__2025-02-14T23:05:21.937919+00:00, execution_date=20250214T230521, start_date=20250214T230822, end_date=20250214T230822
+[2025-02-14T23:08:22.689+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-14T23:08:22.740+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-14T23:08:22.744+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

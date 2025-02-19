@@ -1,0 +1,20 @@
+[2025-02-01T00:06:10.087+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-01T00:06:10.122+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: manage_airflow_roles.assign_permissions_dag manual__2025-02-01T00:05:21.077807+00:00 [queued]>
+[2025-02-01T00:06:10.134+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: manage_airflow_roles.assign_permissions_dag manual__2025-02-01T00:05:21.077807+00:00 [queued]>
+[2025-02-01T00:06:10.134+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-02-01T00:06:10.146+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonDecoratedOperator): assign_permissions_dag> on 2025-02-01 00:05:21.077807+00:00
+[2025-02-01T00:06:10.152+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1017) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-01T00:06:10.154+0000] {standard_task_runner.py:72} INFO - Started process 1018 to run task
+[2025-02-01T00:06:10.154+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'manage_***_roles', 'assign_permissions_dag', 'manual__2025-02-01T00:05:21.077807+00:00', '--job-id', '99', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpcsxuof88']
+[2025-02-01T00:06:10.155+0000] {standard_task_runner.py:105} INFO - Job 99: Subtask assign_permissions_dag
+[2025-02-01T00:06:10.246+0000] {task_command.py:467} INFO - Running <TaskInstance: manage_airflow_roles.assign_permissions_dag manual__2025-02-01T00:05:21.077807+00:00 [running]> on host dab0f5b0cfba
+[2025-02-01T00:06:10.479+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-team' AIRFLOW_CTX_DAG_ID='manage_***_roles' AIRFLOW_CTX_TASK_ID='assign_permissions_dag' AIRFLOW_CTX_EXECUTION_DATE='2025-02-01T00:05:21.077807+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-01T00:05:21.077807+00:00'
+[2025-02-01T00:06:10.480+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-01T00:06:10.484+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-02-01T00:06:10.505+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-01T00:06:10.506+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=manage_***_roles, task_id=assign_permissions_dag, run_id=manual__2025-02-01T00:05:21.077807+00:00, execution_date=20250201T000521, start_date=20250201T000610, end_date=20250201T000610
+[2025-02-01T00:06:10.574+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-01T00:06:10.619+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-01T00:06:10.622+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

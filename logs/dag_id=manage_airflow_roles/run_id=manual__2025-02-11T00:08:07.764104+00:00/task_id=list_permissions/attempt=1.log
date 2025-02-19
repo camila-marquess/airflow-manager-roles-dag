@@ -1,0 +1,196 @@
+[2025-02-11T00:08:09.410+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-11T00:08:09.458+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: manage_airflow_roles.list_permissions manual__2025-02-11T00:08:07.764104+00:00 [queued]>
+[2025-02-11T00:08:09.488+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: manage_airflow_roles.list_permissions manual__2025-02-11T00:08:07.764104+00:00 [queued]>
+[2025-02-11T00:08:09.489+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-02-11T00:08:09.519+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonDecoratedOperator): list_permissions> on 2025-02-11 00:08:07.764104+00:00
+[2025-02-11T00:08:09.532+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3471) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-11T00:08:09.537+0000] {standard_task_runner.py:72} INFO - Started process 3478 to run task
+[2025-02-11T00:08:09.540+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'manage_***_roles', 'list_permissions', 'manual__2025-02-11T00:08:07.764104+00:00', '--job-id', '160', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpsr3xhoep']
+[2025-02-11T00:08:09.544+0000] {standard_task_runner.py:105} INFO - Job 160: Subtask list_permissions
+[2025-02-11T00:08:09.604+0000] {task_command.py:467} INFO - Running <TaskInstance: manage_airflow_roles.list_permissions manual__2025-02-11T00:08:07.764104+00:00 [running]> on host 9c5f21acce5a
+[2025-02-11T00:08:09.683+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-team' AIRFLOW_CTX_DAG_ID='manage_***_roles' AIRFLOW_CTX_TASK_ID='list_permissions' AIRFLOW_CTX_EXECUTION_DATE='2025-02-11T00:08:07.764104+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-11T00:08:07.764104+00:00'
+[2025-02-11T00:08:09.684+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-11T00:08:12.629+0000] {logging_mixin.py:190} WARNING - --- Logging error ---
+[2025-02-11T00:08:12.630+0000] {logging_mixin.py:190} WARNING - Traceback (most recent call last):
+[2025-02-11T00:08:12.630+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/logging/__init__.py", line 1160, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+[2025-02-11T00:08:12.630+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/logging/__init__.py", line 999, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+[2025-02-11T00:08:12.630+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/logging/__init__.py", line 703, in format
+    record.message = record.getMessage()
+                     ^^^^^^^^^^^^^^^^^^^
+[2025-02-11T00:08:12.630+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/logging/__init__.py", line 392, in getMessage
+    msg = msg % self.args
+          ~~~~^~~~~~~~~~~
+[2025-02-11T00:08:12.630+0000] {logging_mixin.py:190} WARNING - TypeError: not all arguments converted during string formatting
+[2025-02-11T00:08:12.631+0000] {logging_mixin.py:190} WARNING - Call stack:
+[2025-02-11T00:08:12.634+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/bin/***", line 8, in <module>
+    sys.exit(main())
+[2025-02-11T00:08:12.634+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/__main__.py", line 62, in main
+    args.func(args)
+[2025-02-11T00:08:12.634+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+[2025-02-11T00:08:12.634+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+[2025-02-11T00:08:12.634+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/cli/celery_command.py", line 61, in wrapper
+    providers_configuration_loaded(func)(*args, **kwargs)
+[2025-02-11T00:08:12.634+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/utils/providers_configuration_loader.py", line 55, in wrapped_function
+    return func(*args, **kwargs)
+[2025-02-11T00:08:12.635+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/cli/celery_command.py", line 234, in worker
+    _run_command_with_daemon_option(
+[2025-02-11T00:08:12.635+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/cli/celery_command.py", line 47, in _run_command_with_daemon_option
+    run_command_with_daemon_option(*args, **kwargs)
+[2025-02-11T00:08:12.635+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/daemon_utils.py", line 86, in run_command_with_daemon_option
+    callback()
+[2025-02-11T00:08:12.635+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/cli/celery_command.py", line 227, in run_celery_worker
+    celery_app.worker_main(options)
+[2025-02-11T00:08:12.635+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/celery/app/base.py", line 391, in worker_main
+    self.start(argv=argv)
+[2025-02-11T00:08:12.635+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/celery/app/base.py", line 371, in start
+    celery.main(args=argv, standalone_mode=False)
+[2025-02-11T00:08:12.635+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+[2025-02-11T00:08:12.635+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[2025-02-11T00:08:12.635+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+[2025-02-11T00:08:12.635+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+[2025-02-11T00:08:12.635+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/click/decorators.py", line 33, in new_func
+    return f(get_current_context(), *args, **kwargs)
+[2025-02-11T00:08:12.636+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/celery/bin/base.py", line 135, in caller
+    return f(ctx, *args, **kwargs)
+[2025-02-11T00:08:12.636+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/celery/bin/worker.py", line 356, in worker
+    worker.start()
+[2025-02-11T00:08:12.636+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/celery/worker/worker.py", line 202, in start
+    self.blueprint.start(self)
+[2025-02-11T00:08:12.636+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+[2025-02-11T00:08:12.636+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/celery/bootsteps.py", line 365, in start
+    return self.obj.start()
+[2025-02-11T00:08:12.636+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/celery/concurrency/base.py", line 130, in start
+    self.on_start()
+[2025-02-11T00:08:12.636+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/celery/concurrency/prefork.py", line 109, in on_start
+    P = self._pool = Pool(processes=self.limit,
+[2025-02-11T00:08:12.636+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/celery/concurrency/asynpool.py", line 464, in __init__
+    super().__init__(processes, *args, **kwargs)
+[2025-02-11T00:08:12.636+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/billiard/pool.py", line 1046, in __init__
+    self._create_worker_process(i)
+[2025-02-11T00:08:12.636+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/celery/concurrency/asynpool.py", line 482, in _create_worker_process
+    return super()._create_worker_process(i)
+[2025-02-11T00:08:12.636+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/billiard/pool.py", line 1158, in _create_worker_process
+    w.start()
+[2025-02-11T00:08:12.636+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/billiard/process.py", line 120, in start
+    self._popen = self._Popen(self)
+[2025-02-11T00:08:12.636+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/billiard/context.py", line 331, in _Popen
+    return Popen(process_obj)
+[2025-02-11T00:08:12.637+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/billiard/popen_fork.py", line 22, in __init__
+    self._launch(process_obj)
+[2025-02-11T00:08:12.637+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/billiard/popen_fork.py", line 77, in _launch
+    code = process_obj._bootstrap()
+[2025-02-11T00:08:12.637+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/billiard/process.py", line 323, in _bootstrap
+    self.run()
+[2025-02-11T00:08:12.637+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/billiard/process.py", line 110, in run
+    self._target(*self._args, **self._kwargs)
+[2025-02-11T00:08:12.637+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/billiard/pool.py", line 292, in __call__
+    sys.exit(self.workloop(pid=pid))
+[2025-02-11T00:08:12.637+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/billiard/pool.py", line 362, in workloop
+    result = (True, prepare_result(fun(*args, **kwargs)))
+[2025-02-11T00:08:12.637+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/celery/app/trace.py", line 651, in fast_trace_task
+    R, I, T, Rstr = tasks[task].__trace__(
+[2025-02-11T00:08:12.637+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+[2025-02-11T00:08:12.637+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+[2025-02-11T00:08:12.637+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/executors/celery_executor_utils.py", line 141, in execute_command
+    _execute_in_fork(command_to_exec, celery_task_id)
+[2025-02-11T00:08:12.637+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/executors/celery_executor_utils.py", line 177, in _execute_in_fork
+    args.func(args)
+[2025-02-11T00:08:12.637+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+[2025-02-11T00:08:12.637+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+[2025-02-11T00:08:12.638+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+[2025-02-11T00:08:12.638+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 254, in _run_task_by_selected_method
+    return _run_task_by_local_task_job(args, ti)
+[2025-02-11T00:08:12.638+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 322, in _run_task_by_local_task_job
+    ret = run_job(job=job_runner.job, execute_callable=job_runner._execute)
+[2025-02-11T00:08:12.638+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+[2025-02-11T00:08:12.638+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 421, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+[2025-02-11T00:08:12.638+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 450, in execute_job
+    ret = execute_callable()
+[2025-02-11T00:08:12.638+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/jobs/local_task_job_runner.py", line 171, in _execute
+    self.task_runner.start()
+[2025-02-11T00:08:12.638+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 55, in start
+    self.process = self._start_by_fork()
+[2025-02-11T00:08:12.638+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+[2025-02-11T00:08:12.638+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+[2025-02-11T00:08:12.639+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+[2025-02-11T00:08:12.639+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+[2025-02-11T00:08:12.639+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+[2025-02-11T00:08:12.639+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+[2025-02-11T00:08:12.639+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+[2025-02-11T00:08:12.639+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+[2025-02-11T00:08:12.639+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+[2025-02-11T00:08:12.639+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+[2025-02-11T00:08:12.639+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+[2025-02-11T00:08:12.639+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+[2025-02-11T00:08:12.640+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+[2025-02-11T00:08:12.640+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+[2025-02-11T00:08:12.640+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+[2025-02-11T00:08:12.640+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+[2025-02-11T00:08:12.640+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+[2025-02-11T00:08:12.640+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+[2025-02-11T00:08:12.640+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+[2025-02-11T00:08:12.640+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+[2025-02-11T00:08:12.640+0000] {logging_mixin.py:190} WARNING -   File "/opt/***/dags/dag.py", line 59, in list_permissions
+    logging.info("Permissions for roles in Airflow: ", output)
+[2025-02-11T00:08:12.640+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/logging/__init__.py", line 2216, in info
+    root.info(msg, *args, **kwargs)
+[2025-02-11T00:08:12.640+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/logging/__init__.py", line 1539, in info
+    self._log(INFO, msg, args, **kwargs)
+[2025-02-11T00:08:12.640+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/logging/__init__.py", line 1684, in _log
+    self.handle(record)
+[2025-02-11T00:08:12.640+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/logging/__init__.py", line 1700, in handle
+    self.callHandlers(record)
+[2025-02-11T00:08:12.641+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/logging/__init__.py", line 1762, in callHandlers
+    hdlr.handle(record)
+[2025-02-11T00:08:12.641+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/logging/__init__.py", line 1028, in handle
+    self.emit(record)
+[2025-02-11T00:08:12.641+0000] {logging_mixin.py:190} WARNING -   File "/home/***/.local/lib/python3.12/site-packages/***/utils/log/file_task_handler.py", line 274, in emit
+    self.handler.emit(record)
+[2025-02-11T00:08:12.641+0000] {logging_mixin.py:190} WARNING - Message: 'Permissions for roles in Airflow: '
+Arguments: ([{'name': '***', 'resource': 'DAG Runs', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:conditional_dataset_and_time_based_timetable', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:consume_1_and_2_with_dataset_expressions', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:consume_1_or_2_with_dataset_expressions', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:consume_1_or_both_2_and_3_with_dataset_expressions', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:dataset_alias_example_alias_consumer', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:dataset_alias_example_alias_consumer_with_no_taskflow', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:dataset_alias_example_alias_producer', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:dataset_alias_example_alias_producer_with_no_taskflow', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:dataset_consumes_1', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:dataset_consumes_1_and_2', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:dataset_consumes_1_never_scheduled', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:dataset_consumes_unknown_never_scheduled', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:dataset_produces_1', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:dataset_produces_2', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:dataset_s3_bucket_consumer', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:dataset_s3_bucket_consumer_with_no_taskflow', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:dataset_s3_bucket_producer', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:dataset_s3_bucket_producer_with_no_taskflow', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:dataset_with_extra_by_context', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:dataset_with_extra_by_yield', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:dataset_with_extra_from_classic_operator', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_bash_decorator', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_bash_operator', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_branch_datetime_operator_2', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_branch_dop_operator_v3', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_branch_labels', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_branch_operator', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_branch_python_operator_decorator', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_complex', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_dag_decorator', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_display_name', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_dynamic_task_mapping', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_dynamic_task_mapping_with_no_taskflow_operators', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_external_task_marker_child', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_external_task_marker_parent', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_kubernetes_executor', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_local_kubernetes_executor', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_params_trigger_ui', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_params_ui_tutorial', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_passing_params_via_test_command', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_python_decorator', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_python_operator', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_sensor_decorator', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_sensors', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_setup_teardown', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_setup_teardown_taskflow', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_short_circuit_decorator', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_short_circuit_operator', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_skip_dag', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_sla_dag', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_subdag_operator', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_task_group', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_task_group_decorator', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_time_delta_sensor_async', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_trigger_controller_dag', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_trigger_target_dag', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_weekday_branch_operator', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_workday_timetable', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_xcom', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_xcom_args', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:example_xcom_args_with_operators', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:latest_only', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:latest_only_with_trigger', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:read_dataset_event', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:read_dataset_event_from_classic', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:tutorial', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:tutorial_dag', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:tutorial_objectstorage', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:tutorial_taskflow_api', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:tutorial_taskflow_api_virtualenv', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'DAG:tutorial_taskflow_templates', 'action': 'can_create,can_edit,can_read'}, {'name': '***', 'resource': 'Website', 'action': 'can_read'}, {'name': 'dados', 'resource': 'DAG Runs', 'action': 'can_create,can_edit,can_read'}, {'name': 'data-team', 'resource': 'DAG Runs', 'action': 'can_create,can_edit,can_read'}, {'name': 'data-team', 'resource': 'DAG:hello_world_dag', 'action': 'can_create,can_edit,can_read'}, {'name': 'data-team', 'resource': 'DAG:manage_***_roles', 'action': 'can_create,can_edit,can_read'}, {'name': 'data-team', 'resource': 'Website', 'action': 'can_read'}],)
+[2025-02-11T00:08:12.641+0000] {python.py:240} INFO - Done. Returned value was: {'DAG Runs': ['can_create', 'can_edit', 'can_read'], 'conditional_dataset_and_time_based_timetable': ['can_create', 'can_edit', 'can_read'], 'consume_1_and_2_with_dataset_expressions': ['can_create', 'can_edit', 'can_read'], 'consume_1_or_2_with_dataset_expressions': ['can_create', 'can_edit', 'can_read'], 'consume_1_or_both_2_and_3_with_dataset_expressions': ['can_create', 'can_edit', 'can_read'], 'dataset_alias_example_alias_consumer': ['can_create', 'can_edit', 'can_read'], 'dataset_alias_example_alias_consumer_with_no_taskflow': ['can_create', 'can_edit', 'can_read'], 'dataset_alias_example_alias_producer': ['can_create', 'can_edit', 'can_read'], 'dataset_alias_example_alias_producer_with_no_taskflow': ['can_create', 'can_edit', 'can_read'], 'dataset_consumes_1': ['can_create', 'can_edit', 'can_read'], 'dataset_consumes_1_and_2': ['can_create', 'can_edit', 'can_read'], 'dataset_consumes_1_never_scheduled': ['can_create', 'can_edit', 'can_read'], 'dataset_consumes_unknown_never_scheduled': ['can_create', 'can_edit', 'can_read'], 'dataset_produces_1': ['can_create', 'can_edit', 'can_read'], 'dataset_produces_2': ['can_create', 'can_edit', 'can_read'], 'dataset_s3_bucket_consumer': ['can_create', 'can_edit', 'can_read'], 'dataset_s3_bucket_consumer_with_no_taskflow': ['can_create', 'can_edit', 'can_read'], 'dataset_s3_bucket_producer': ['can_create', 'can_edit', 'can_read'], 'dataset_s3_bucket_producer_with_no_taskflow': ['can_create', 'can_edit', 'can_read'], 'dataset_with_extra_by_context': ['can_create', 'can_edit', 'can_read'], 'dataset_with_extra_by_yield': ['can_create', 'can_edit', 'can_read'], 'dataset_with_extra_from_classic_operator': ['can_create', 'can_edit', 'can_read'], 'example_bash_decorator': ['can_create', 'can_edit', 'can_read'], 'example_bash_operator': ['can_create', 'can_edit', 'can_read'], 'example_branch_datetime_operator_2': ['can_create', 'can_edit', 'can_read'], 'example_branch_dop_operator_v3': ['can_create', 'can_edit', 'can_read'], 'example_branch_labels': ['can_create', 'can_edit', 'can_read'], 'example_branch_operator': ['can_create', 'can_edit', 'can_read'], 'example_branch_python_operator_decorator': ['can_create', 'can_edit', 'can_read'], 'example_complex': ['can_create', 'can_edit', 'can_read'], 'example_dag_decorator': ['can_create', 'can_edit', 'can_read'], 'example_display_name': ['can_create', 'can_edit', 'can_read'], 'example_dynamic_task_mapping': ['can_create', 'can_edit', 'can_read'], 'example_dynamic_task_mapping_with_no_taskflow_operators': ['can_create', 'can_edit', 'can_read'], 'example_external_task_marker_child': ['can_create', 'can_edit', 'can_read'], 'example_external_task_marker_parent': ['can_create', 'can_edit', 'can_read'], 'example_kubernetes_executor': ['can_create', 'can_edit', 'can_read'], 'example_local_kubernetes_executor': ['can_create', 'can_edit', 'can_read'], 'example_params_trigger_ui': ['can_create', 'can_edit', 'can_read'], 'example_params_ui_tutorial': ['can_create', 'can_edit', 'can_read'], 'example_passing_params_via_test_command': ['can_create', 'can_edit', 'can_read'], 'example_python_decorator': ['can_create', 'can_edit', 'can_read'], 'example_python_operator': ['can_create', 'can_edit', 'can_read'], 'example_sensor_decorator': ['can_create', 'can_edit', 'can_read'], 'example_sensors': ['can_create', 'can_edit', 'can_read'], 'example_setup_teardown': ['can_create', 'can_edit', 'can_read'], 'example_setup_teardown_taskflow': ['can_create', 'can_edit', 'can_read'], 'example_short_circuit_decorator': ['can_create', 'can_edit', 'can_read'], 'example_short_circuit_operator': ['can_create', 'can_edit', 'can_read'], 'example_skip_dag': ['can_create', 'can_edit', 'can_read'], 'example_sla_dag': ['can_create', 'can_edit', 'can_read'], 'example_subdag_operator': ['can_create', 'can_edit', 'can_read'], 'example_task_group': ['can_create', 'can_edit', 'can_read'], 'example_task_group_decorator': ['can_create', 'can_edit', 'can_read'], 'example_time_delta_sensor_async': ['can_create', 'can_edit', 'can_read'], 'example_trigger_controller_dag': ['can_create', 'can_edit', 'can_read'], 'example_trigger_target_dag': ['can_create', 'can_edit', 'can_read'], 'example_weekday_branch_operator': ['can_create', 'can_edit', 'can_read'], 'example_workday_timetable': ['can_create', 'can_edit', 'can_read'], 'example_xcom': ['can_create', 'can_edit', 'can_read'], 'example_xcom_args': ['can_create', 'can_edit', 'can_read'], 'example_xcom_args_with_operators': ['can_create', 'can_edit', 'can_read'], 'latest_only': ['can_create', 'can_edit', 'can_read'], 'latest_only_with_trigger': ['can_create', 'can_edit', 'can_read'], 'read_dataset_event': ['can_create', 'can_edit', 'can_read'], 'read_dataset_event_from_classic': ['can_create', 'can_edit', 'can_read'], 'tutorial': ['can_create', 'can_edit', 'can_read'], 'tutorial_dag': ['can_create', 'can_edit', 'can_read'], 'tutorial_objectstorage': ['can_create', 'can_edit', 'can_read'], 'tutorial_taskflow_api': ['can_create', 'can_edit', 'can_read'], 'tutorial_taskflow_api_virtualenv': ['can_create', 'can_edit', 'can_read'], 'tutorial_taskflow_templates': ['can_create', 'can_edit', 'can_read'], 'Website': ['can_read'], 'hello_world_dag': ['can_create', 'can_edit', 'can_read'], 'manage_airflow_roles': ['can_create', 'can_edit', 'can_read']}
+[2025-02-11T00:08:12.660+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-11T00:08:12.661+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=manage_***_roles, task_id=list_permissions, run_id=manual__2025-02-11T00:08:07.764104+00:00, execution_date=20250211T000807, start_date=20250211T000809, end_date=20250211T000812
+[2025-02-11T00:08:12.687+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-11T00:08:12.731+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-11T00:08:12.735+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

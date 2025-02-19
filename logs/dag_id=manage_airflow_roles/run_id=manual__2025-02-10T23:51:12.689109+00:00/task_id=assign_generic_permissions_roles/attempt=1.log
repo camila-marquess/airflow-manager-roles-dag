@@ -1,0 +1,110 @@
+[2025-02-10T23:51:27.454+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-10T23:51:27.475+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: manage_airflow_roles.assign_generic_permissions_roles manual__2025-02-10T23:51:12.689109+00:00 [queued]>
+[2025-02-10T23:51:27.486+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: manage_airflow_roles.assign_generic_permissions_roles manual__2025-02-10T23:51:12.689109+00:00 [queued]>
+[2025-02-10T23:51:27.487+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-02-10T23:51:27.502+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonDecoratedOperator): assign_generic_permissions_roles> on 2025-02-10 23:51:12.689109+00:00
+[2025-02-10T23:51:27.508+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1093) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-10T23:51:27.510+0000] {standard_task_runner.py:72} INFO - Started process 1106 to run task
+[2025-02-10T23:51:27.510+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'manage_***_roles', 'assign_generic_permissions_roles', 'manual__2025-02-10T23:51:12.689109+00:00', '--job-id', '149', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpg4joohm7']
+[2025-02-10T23:51:27.511+0000] {standard_task_runner.py:105} INFO - Job 149: Subtask assign_generic_permissions_roles
+[2025-02-10T23:51:27.566+0000] {task_command.py:467} INFO - Running <TaskInstance: manage_airflow_roles.assign_generic_permissions_roles manual__2025-02-10T23:51:12.689109+00:00 [running]> on host 9c5f21acce5a
+[2025-02-10T23:51:27.681+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-team' AIRFLOW_CTX_DAG_ID='manage_***_roles' AIRFLOW_CTX_TASK_ID='assign_generic_permissions_roles' AIRFLOW_CTX_EXECUTION_DATE='2025-02-10T23:51:12.689109+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-10T23:51:12.689109+00:00'
+[2025-02-10T23:51:27.682+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-10T23:51:32.073+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:51:35.664+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:51:39.160+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:51:43.186+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:51:47.965+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:51:52.939+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:51:57.510+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:52:01.819+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:52:05.715+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:52:08.745+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:52:11.792+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:52:14.953+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:52:17.971+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:52:20.603+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:52:23.304+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:52:26.187+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:52:29.134+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:52:31.684+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:52:34.417+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:52:37.385+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:52:40.554+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:52:43.206+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:52:45.883+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:52:48.638+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:52:51.423+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:52:54.227+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:52:56.968+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:52:59.800+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:53:02.760+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:53:05.802+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:53:08.806+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:53:11.505+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:53:14.297+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:53:17.141+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:53:20.220+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:53:22.723+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:53:25.512+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:53:28.173+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:53:30.907+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:53:33.676+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:53:37.213+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:53:40.453+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:53:43.769+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:53:47.412+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:53:50.338+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:53:53.341+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:53:56.225+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:53:59.922+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:54:03.193+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:54:06.260+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:54:09.222+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:54:12.288+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:54:15.213+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:54:18.145+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:54:21.016+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:54:23.680+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:54:27.019+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:54:30.604+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:54:34.324+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:54:38.217+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:54:41.539+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:54:44.749+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:54:47.578+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:54:50.484+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:54:53.982+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:54:57.296+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:55:00.835+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:55:03.935+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:55:04.564+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-02-10T23:55:04.565+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-02-10T23:55:04.566+0000] {process_utils.py:132} INFO - Sending 15 to group 1106. PIDs of all processes in the group: [2384, 1106]
+[2025-02-10T23:55:04.566+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 1106
+[2025-02-10T23:55:04.567+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-02-10T23:55:04.570+0000] {dag.py:163} INFO - Error assigning DAG Runs permissions to dados
+[2025-02-10T23:55:04.570+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=2384, status='terminated', started='23:55:03') (2384) terminated with exit code None
+[2025-02-10T23:55:07.447+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:55:10.644+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:55:13.778+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:55:17.419+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:55:20.948+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:55:24.166+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:55:27.115+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:55:30.142+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:55:33.294+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:55:36.245+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:55:40.092+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:55:46.447+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:55:50.496+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:55:53.812+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:55:56.789+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:55:59.968+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:56:03.553+0000] {dag.py:161} INFO - Assigning DAG Runs permissions to dados
+[2025-02-10T23:56:04.579+0000] {process_utils.py:150} WARNING - process psutil.Process(pid=1106, name='airflow task ru', status='sleeping', started='23:51:26') did not respond to SIGTERM. Trying SIGKILL
+[2025-02-10T23:56:04.580+0000] {process_utils.py:87} INFO - Sending the signal 9 to group 1106
+[2025-02-10T23:56:04.587+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1106, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='23:51:26') (1106) terminated with exit code -9
+[2025-02-10T23:56:04.588+0000] {standard_task_runner.py:190} ERROR - ('Job 149 was killed before it finished (likely due to running out of memory)', 'For more information, see https://***.apache.org/docs/apache-***/stable/troubleshooting.html#LocalTaskJob-killed')

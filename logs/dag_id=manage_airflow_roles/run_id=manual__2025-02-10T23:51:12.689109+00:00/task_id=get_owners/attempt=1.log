@@ -1,0 +1,21 @@
+[2025-02-10T23:51:13.432+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-10T23:51:13.457+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: manage_airflow_roles.get_owners manual__2025-02-10T23:51:12.689109+00:00 [queued]>
+[2025-02-10T23:51:13.472+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: manage_airflow_roles.get_owners manual__2025-02-10T23:51:12.689109+00:00 [queued]>
+[2025-02-10T23:51:13.472+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-02-10T23:51:13.500+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonDecoratedOperator): get_owners> on 2025-02-10 23:51:12.689109+00:00
+[2025-02-10T23:51:13.514+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=927) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-10T23:51:13.517+0000] {standard_task_runner.py:72} INFO - Started process 936 to run task
+[2025-02-10T23:51:13.517+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'manage_***_roles', 'get_owners', 'manual__2025-02-10T23:51:12.689109+00:00', '--job-id', '146', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp0lpouzlt']
+[2025-02-10T23:51:13.520+0000] {standard_task_runner.py:105} INFO - Job 146: Subtask get_owners
+[2025-02-10T23:51:13.606+0000] {task_command.py:467} INFO - Running <TaskInstance: manage_airflow_roles.get_owners manual__2025-02-10T23:51:12.689109+00:00 [running]> on host 9c5f21acce5a
+[2025-02-10T23:51:13.731+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-team' AIRFLOW_CTX_DAG_ID='manage_***_roles' AIRFLOW_CTX_TASK_ID='get_owners' AIRFLOW_CTX_EXECUTION_DATE='2025-02-10T23:51:12.689109+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-10T23:51:12.689109+00:00'
+[2025-02-10T23:51:13.732+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-10T23:51:13.736+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/***/dags
+[2025-02-10T23:51:13.753+0000] {python.py:240} INFO - Done. Returned value was: ['data-team', 'dados']
+[2025-02-10T23:51:13.780+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-10T23:51:13.781+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=manage_***_roles, task_id=get_owners, run_id=manual__2025-02-10T23:51:12.689109+00:00, execution_date=20250210T235112, start_date=20250210T235113, end_date=20250210T235113
+[2025-02-10T23:51:13.818+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-10T23:51:13.846+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-10T23:51:13.847+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
