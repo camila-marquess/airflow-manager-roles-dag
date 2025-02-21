@@ -10,7 +10,7 @@ default_args = {"owner": "data-team"}
 
 
 @dag(
-    dag_id="manage_airflow_roles",
+    dag_id="role_manager_dag",
     default_args=default_args,
     start_date=datetime(2025, 2, 14),
     schedule_interval="0 10 * * 1",
