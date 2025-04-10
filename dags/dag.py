@@ -185,50 +185,52 @@ def manage_airflow_roles():
         return dag_roles
 
     @task()
-    def assign_permissions_dag(dags_info, owners_interface_dict):
+    def assign_permissions_dag(dags_info, list_permissions, owners_interface_dict):
         """
         Assign permissions to dags
         Args:
             dags_info (dict): Dictionary with dags by owner
+            list_permissions (dict): Dictionary with permissions by role
             owners_interface_dict (dict): Dictionary with dags by owner from Airflow interface
         """
+        
+        permissions_list = list(list_permissions.keys())  
+
         for owner, dags in dags_info.items():
             for dag_id in dags:
+                current_owner = None  
 
-                for interface_owner, interface_dag in owners_interface_dict.items():
-                    for dag in interface_dag:
+                if dag_id in permissions_list:
+                    for interface_owner, interface_dag in owners_interface_dict.items():
+                        for dag in interface_dag:
+                            if dag_id in dag:
+                                current_owner = interface_owner
+                                break 
 
-                        if dag_id in dag:
-                            current_owner = interface_owner
+                    if current_owner == owner:
+                        logging.info(f"Permission for DAG {dag_id} is already correctly assigned to {owner}")
+                        continue 
 
-                            if current_owner == owner:
-                                logging.info(
-                                    f"Permission for DAG {dag_id} is already correctly assigned to {owner}"
-                                )
-                                continue
-                            try:
-                                subprocess.run(
-                                    [
-                                        "airflow",
-                                        "roles",
-                                        "add-perms",
-                                        owner,
-                                        "-a",
-                                        "can_read",
-                                        "can_edit",
-                                        "can_create",
-                                        "-r",
-                                        f"DAG:{dag_id}",
-                                    ],
-                                    check=True,
-                                )
-                                logging.info(
-                                    f"Assigned permissions to {owner} for DAG {dag_id}"
-                                )
-                            except subprocess.CalledProcessError:
-                                logging.error(
-                                    f"Error assigning permissions to {owner} for DAG {dag_id}"
-                                )
+                try:
+                    subprocess.run(
+                        [
+                            "airflow",
+                            "roles",
+                            "add-perms",
+                            owner,
+                            "-a",
+                            "can_read",
+                            "can_edit",
+                            "can_create",
+                            "-r",
+                            f"DAG:{dag_id}",
+                        ],
+                        check=True, 
+                    )
+                    logging.info(f"Assigned permissions to {owner} for DAG {dag_id}")
+                except subprocess.CalledProcessError:
+                    logging.error(f"Error assigning permissions to {owner} for DAG {dag_id}")
+
 
     @task()
     def add_users_to_roles():
@@ -260,7 +262,7 @@ def manage_airflow_roles():
     ) >> permissions_list_by_role >> assign_generic_permissions_roles(
         dags_by_owner
     ) >> assign_permissions_dag(
-        dags_by_owner, get_dags_by_owner_interfaces
+        dags_by_owner, permissions_list_by_role, get_dags_by_owner_interfaces
     ) >> add_users_to_roles()
 
 
